@@ -20,21 +20,19 @@
             <h1>HTML Elements</h1>
             <hr>
             <nav>
-              <ul>
-                <li><a href="#home"><b>Home</b></a></li>
-                <li><a href="#headers"><b>Headers</b></a></li>
-                <li><a href="#text"><b>Text formats</b></a></li>
-                <li><a href="#list"><b>List</b></a></li>
-                <li><a href="#table"><b>Table</b></a></li>
-                <li><a href="#blockquotes"><b>Blockquotes</b></a></li>
-              </ul>
+              <a href="#home"><b>Home</b></a>
+              <a href="#headers"><b>Headers</b></a>
+              <a href="#text"><b>Text formats</b></a>
+              <a href="#list"><b>List</b></a>
+              <a href="#table"><b>Table</b></a>
+              <a href="#blockquotes"><b>Blockquotes</b></a>
             </nav>
           </header>
           <hr>
 
           <div>
             <p>Lorem ipsum dolor sit amet,
-              <a href="#">test link</a>
+              <a href="">test link</a>
               adipiscing elit.
               <strong>This is strong.</strong>
               Nullam dignissim convallis est. Quisque aliquam.
@@ -46,14 +44,17 @@
               <cite>The New York Times</cite>
               (That&#8217;s a citation).
               <u>Underline.</u>
-              Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+              Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy.
+              Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
             </p>
             <p>
               Watch out for the abbreviations!
               <abbr title="Hyper Text Markup Language">HTML</abbr>
               and
               <abbr title="Cascading Style Sheets">CSS</abbr>
-              are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget
+              are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo
+              vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis,
+              massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget
               metus. To copy a file type
               <kbd>COPY</kbd>
               <em>filename.</em>
@@ -205,37 +206,32 @@ both           spaces and
           </section>
           <hr>
 
-          <form>
-            <fieldset>
-              <label for="userName">First name: </label>
-              <input type="text" name="firstname" id="userName">
-            </fieldset>
+          <form action="#" method="post">
+            <label for="userName">First name: </label>
+            <input type="text" name="firstname" id="userName">
+            <br>
 
-            <fieldset>
-              <label for="secondName">Second name: </label>
-              <input type="text" name="secondname" id="secondName">
-            </fieldset>
+            <label for="secondName">Second name: </label>
+            <input type="text" name="secondname" id="secondName">
+            <br>
 
-            <fieldset>
-              <label for="email">Email: </label>
-              <input type="email" name="email" id="email">
-            </fieldset>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email">
+            <br>
 
-            <fieldset>
-              <label for="password">Password: </label>
-              <input type="number" name="password" id="password">
-            </fieldset>
+            <label for="password">Password: </label>
+            <input type="number" name="password" id="password">
+            <br>
 
-            <fieldset>
-              <textarea rows="5" cols="30"></textarea>
-            </fieldset>
+            <textarea rows="5" cols="30"></textarea>
+            <br>
 
-            <fieldset>
-              <button type="submit">Submit</button>
-            </fieldset>
+            <button type="submit">Submit</button>
           </form>
 
-          <footer>&copy; Copyright Epam Systems</footer>
+          <footer>
+            <span>&copy; Copyright Epam Systems</span>
+          </footer>
 
         </div>
       </div>
