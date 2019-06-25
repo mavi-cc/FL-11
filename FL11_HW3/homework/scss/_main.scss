@@ -1,0 +1,274 @@
+@mixin displayFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+%additionalLine {
+  content: "";
+  position: absolute;
+  background-color: map-get($colors, underLine);
+  z-index: -1;
+}
+
+body {
+  background: map-get($colors, contentBackground);
+  margin: 0;
+}
+
+.landing-logo {
+  p {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: $headerTextFont;
+    line-height: 22px;
+    white-space: pre;
+    text-align: center;
+    height: inherit;
+    padding-left: 10px;
+
+    span {
+      font-size: 10px;
+      display: block;
+    }
+  }
+
+  img,
+  p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+header {
+  .landing-logo {
+    p {
+      color: map-get($colors, headerLogoColor);
+    }
+  }
+}
+
+footer {
+  .landing-logo {
+    p {
+      color: map-get($colors, footerLogoColor);
+    }
+  }
+}
+
+button {
+  background-color: map-get($colors, buttonBackground);
+  /* Green */
+  border: none;
+  border-radius: 4px;
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
+  color: white;
+  padding: 10px 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:focus {
+  outline: none;
+}
+
+header {
+  background: url($headerImagePath) repeat-x scroll 100% 40%;
+  border-radius: 0 0 32em/15em 0;
+  padding-bottom: 210px;
+}
+
+.header-wrap {
+  color: map-get($colors, headerFontColor);
+  margin-left: 190px;
+  margin-right: 190px;
+
+  p {
+    margin: 20px 0;
+  }
+
+  .header_heading {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 65px;
+    max-width: 50%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .header_heading::after {
+    @extend %additionalLine;
+    display: block;
+    width: 270px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .header_text {
+    font-family: $headerTextFont;
+    line-height: 23px;
+    white-space: pre-line;
+    margin: 50px 0;
+  }
+}
+
+main {
+  margin: 0 auto;
+  width: 1100px;
+}
+
+.section_text {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: map-get($colors, headerFontColor);
+  font-size: 38px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.section_text::after {
+  @extend %additionalLine;
+  display: block;
+  width: 135px;
+  height: 12px;
+  top: 60%;
+  right: 34%;
+  padding-left: 40px;
+}
+
+.section_card_wrap {
+  @include displayFlex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+
+  .section_card {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 32%;
+    background-color: map-get($colors, cardBackground);
+    border-radius: 4px;
+    padding: 16px;
+    margin: 9px;
+    text-align: center;
+    z-index: -10;
+
+    .section_card_heading {
+      margin: 14px 0;
+      position: relative;
+    }
+
+    .section_card_heading::after {
+      @extend %additionalLine;
+      display: block;
+      width: 2px;
+      height: 4px;
+      position: absolute;
+      top: 50%;
+      left: 25%;
+    }
+
+    .section_card_img {
+      border-radius: 4px;
+      width: 100%;
+      height: auto;
+    }
+
+    .section_card_heading {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .section_card_heading::after {
+      @extend %additionalLine;
+      display: block;
+      width: 130px;
+      height: 20px;
+      position: absolute;
+      bottom: 0;
+      right: 100px;
+      padding-left: 40px;
+    }
+  }
+}
+
+.section_banner {
+  @include displayFlex;
+  margin: 20px;
+  padding: 12px 110px;
+  background: $gradient;
+  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 600px;
+  right: 25%;
+  transform: translate(10%, -60%);
+  z-index: 1;
+
+  .section_banner_text_wrap {
+    padding-bottom: 20px;
+
+    .section_banner_heading {
+      font-family: 'Source Sans Pro', sans-serif;
+      color: map-get($colors, headerFontColor);
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 18px;
+      position: relative;
+    }
+
+    .section_banner_heading::after {
+      @extend %additionalLine;
+      display: block;
+      width: 55px;
+      height: 15px;
+      position: absolute;
+      top: 60%;
+      left: 30%;
+    }
+
+    .section_banner_text_wrap {
+      padding: 15px 80px;
+    }
+  }
+}
+
+.footer-cr,
+.footer_text,
+.section_banner_text,
+.section_card_text {
+  font-family: $sectionTextFont;
+  color: #B0B4BA;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+footer {
+  margin-top: 60px;
+  background-color: map-get($colors, cardBackground);
+}
+
+.footer-wrap {
+  @include displayFlex;
+  padding-top: 120px;
+  padding-bottom: 50px;
+  margin: 0 190px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .footer_text {
+    max-width: 300px;
+  }
+}
