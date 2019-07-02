@@ -1,15 +1,3 @@
-/*
- * Feel free to change name of colors if you need it
- * Feel free to add new colors if you need it
- */
-/* :root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #162b4d;
-  --link: #fff;
-  --link--hover: #b8b8b8;
-  --bg-footer-color: #162b4d;;
-}
-*/
 body {
   font-family: roboto;
 }
@@ -159,11 +147,6 @@ main article {
   opacity: 0.5;
 }
 
-article img {
-  width: 100%;
-  height: auto;
-}
-
 .article-title {
   font-size: 3.6em;
   line-height: 1em;
@@ -214,18 +197,6 @@ aside {
 
 aside article {
   background-color: #fff;
-}
-
-aside .first-news-img {
-  background-image: url('../img/news1.jpg');
-  background-position: center;
-  background-size: cover;
-}
-
-aside .second-news-img {
-  background-image: url('../img/news2.jpg');
-  background-position: center;
-  background-size: cover;
 }
 
 aside img {
