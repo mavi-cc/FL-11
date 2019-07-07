@@ -11,7 +11,7 @@ let centerX = (a1 + b1) / d
 let centerY = (a2 + b2) / d
 
 if (centerX === c1 && centerY === c2) {
-    console.log(true);
+  console.log(true);
 } else {
-    console.log(false)
+  console.log(false)
 }
