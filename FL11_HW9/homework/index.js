@@ -13,14 +13,13 @@ function getNumbers(s) {
 
 function findTypes() {
   let allTypes = {};
-  const one = 1;
 
   for (let i = 0; i < arguments.length; i++) {
     let dataType = typeof arguments[i];
     if (dataType in allTypes) {
       allTypes[dataType] += 1;
     } else {
-      allTypes[dataType] = one;
+      allTypes[dataType] = 1;
     }
   }
   return allTypes;
