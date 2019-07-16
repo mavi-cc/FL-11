@@ -92,7 +92,7 @@ function keys(obj) {
       outputArray.push(key);
     }
   }
-  return outputArray
+  return outputArray;
 }
 
 function values(obj) {
@@ -102,5 +102,5 @@ function values(obj) {
       outputArray.push(obj[key]);
     }
   }
-  return outputArray
+  return outputArray;
 }
