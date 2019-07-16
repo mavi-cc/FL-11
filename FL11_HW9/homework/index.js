@@ -11,7 +11,6 @@ function getNumbers(s) {
   return allNumbers;
 }
 
-
 function findTypes() {
   let allTypes = {};
   const one = 1;
