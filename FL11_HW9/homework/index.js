@@ -11,15 +11,14 @@ function getNumbers(s) {
   return allNumbers;
 }
 
+
 function findTypes() {
   let allTypes = {};
-  //let tmpValue;
   const one = 1;
 
   for (let i = 0; i < arguments.length; i++) {
     let dataType = typeof arguments[i];
     if (dataType in allTypes) {
-      //let tmpValue = allTypes[dataType];
       allTypes[dataType] += 1;
     } else {
       allTypes[dataType] = one;
