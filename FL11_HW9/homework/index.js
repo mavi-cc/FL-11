@@ -26,14 +26,14 @@ function findTypes() {
 }
 
 function executeforEach() {
-  let filteredArray = [];
+  let iteratesArray = [];
   let inputArray = arguments[0];
   let inputFunction = arguments[1];
 
   for (let i = 0; i < inputArray.length; i++) {
-    filteredArray.push(inputFunction(inputArray[i]));
+    iteratesArray.push(inputFunction(inputArray[i]));
   }
-  return filteredArray;
+  return iteratesArray;
 }
 
 function mapArray(...args) {
@@ -42,15 +42,15 @@ function mapArray(...args) {
 }
 
 function filterArray(...args) {
-  let filteredArray = executeforEach(...args);
-  let outputArray = [];
+  let iteratesArray = executeforEach(...args);
+  let filteredArray = [];
 
-  for (let i = 0; i < filteredArray.length; i++) {
-    if (filteredArray[i] === true) {
-      outputArray.push(arguments[0][i]);
+  for (let i = 0; i < iteratesArray.length; i++) {
+    if (iteratesArray[i] === true) {
+      filteredArray.push(arguments[0][i]);
     }
   }
-  return outputArray;
+  return filteredArray;
 }
 
 function showFormattedDate(date) {
@@ -87,18 +87,20 @@ function getAmountOfAdultPeople(data) {
 
 function keys(obj) {
   let outputArray = [];
-
   for (let key in obj) {
-    outputArray.push(key);
+    if (obj.hasOwnProperty(key)) {
+      outputArray.push(key);
+    }
   }
   return outputArray
 }
 
 function values(obj) {
   let outputArray = [];
-
   for (let key in obj) {
-    outputArray.push(obj[key]);
+    if (obj.hasOwnProperty(key)) {
+      outputArray.push(obj[key]);
+    }
   }
   return outputArray
 }
